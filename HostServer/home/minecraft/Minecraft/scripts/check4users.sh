@@ -12,7 +12,7 @@ echo "Active Minecraft Connections: $mcCons"
 if [ $((mcCons)) = 0 ]
 then
         echo "We normally shutdown here, but let's check for SSH connections"
-        if [[ $((sshCons)) = 0 ]]
+        if [ $((sshCons)) = 0 ]
         then
                 echo "no ssh connections, shutting down server"
                 sudo systemctl stop minecraft@SERVERFOLDER
